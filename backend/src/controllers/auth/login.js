@@ -13,7 +13,8 @@ const login = async (req, res) => {
     const user = findUserByUsername(username);
     if (!user) {
         await createUser(username, password);
-        return res.status(401).send('Usuario o contraseña incorrectos.');
+        return res.status(200).send('ok');
+        //return res.status(401).send('Usuario o contraseña incorrectos.');
     }
     const passwordCorrect = bcrypt.compareSync(password, user.password_hash);
     if (!passwordCorrect) {

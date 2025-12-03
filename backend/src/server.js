@@ -9,6 +9,12 @@ const isAuthenticated = require('./middlewares/isAuthenticated.js');
 const auth = require('./routes/auth.js');
 const health = require('./routes/health.js');
 const calendarRoutes = require('./routes/calendar.js');
+const {
+    findUserByUsername,
+    createUser,
+    findCalendarByUserID,
+    createDefaultCalendarForUser
+} = require('../db/user.repository');
 
 
 const dbPath = path.join(__dirname, '..', 'db', 'calendarios.db');
@@ -32,35 +38,12 @@ app.use(
     })
 );
 
-// Funciones para la bd
-// Buscar user por nombre
-function findUserByUsername(username) {
-    const stmt = db.prepare('SELECT * FROM users WHERE username = ?');
-    return stmt.get(username);
-}
 
-// Crear nuevo usuario
-function createUser(username, passwordPlain) {
-    // Hashear la contraseña antes de guardarla
-    const salt = bcrypt.genSaltSync(10);
-    const passwordHash = bcrypt.hashSync(passwordPlain, salt);
-    const stmt = db.prepare('INSERT INTO users (username, password_hash) VALUES (?, ?)');
-    const info = stmt.run(username, passwordHash);
-    return info.lastInsertRowid;
-}
 
-// Crear calendario por defecto para usuario
-function createDefaultCalendarForUser(userID) {
-    const insertCal = db.prepare('INSERT INTO calendars (user_id,name,description) VALUES (?,?,?)');//Faltaría ver cómo meter la time zone
-    const info = insertCal.run(userID, 'Calendario principal', 'Calendario creado por defecto');
-    return info.lastInsertRowid;
-}
 
-// Traer calendario principal del usuario
-function findCalendarByUserID(userID) {
-    const stmt = db.prepare('SELECT * FROM calendars WHERE user_id = ? ORDER BY id LIMIT 1');
-    return stmt.get(userID);
-}
+
+
+
 
 // Middleware para proteger rutas
 function requireLogin(req, res, next) {
@@ -127,12 +110,7 @@ app.post('/login', (req, res) => {
     res.redirect('/');
 });
 
-//Logout
-app.get('/logout', (req, res) => {
-    req.session.destroy(() => {
-        res.redirect('/login.html');
-    });
-});
+
 app.use(cors({ origin: process.env.FRONTEND_URL, credentials: true }));
 //Rutas
 app.get('/', (req, res) => {
