@@ -3,13 +3,15 @@ const router = express.Router();
 const ical = require("node-ical");
 const multer = require("multer");
 const fs = require("fs");
+const getEvents = require('../controllers/calendar/getEvents.js');
 
 const upload = multer({ dest: "uploads/" });
 const {
-  registerEvent
+  registerEvent,
 } = require('../../db/calendar.repository');
 
 
+router.get('/events', getEvents);
 router.post("/upload-ics", upload.single("file"), async (req, res) => {
   try {
 

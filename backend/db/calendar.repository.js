@@ -1,5 +1,26 @@
 const db = require('./db');
 
+function getCalendarEvents(calendar_id) {
+    // 1. Validación básica
+    if (!calendar_id) {
+        throw new Error("El calendar_id es obligatorio");
+    }
+    // 2. Consulta SQL con alias (AS) para renombrar las columnas al vuelo
+    const stmt = db.prepare(`
+        SELECT 
+            id,
+            summary AS title,       
+            dtstart_ics AS start,   
+            dtend_ics AS "end",     
+            description,
+            category
+        FROM events 
+        WHERE calendar_id = ?
+    `);
+
+    // 3. .all() devuelve un array con todos los resultados encontrados
+    return stmt.all(calendar_id);
+}
 function registerEvent(calendar_id, uid, title, start, end, description, category) {
 
     // 1. CONVERSIÓN DE SEGURIDAD:
@@ -44,5 +65,6 @@ function registerEvent(calendar_id, uid, title, start, end, description, categor
 }
 
 module.exports = {
-    registerEvent
+    registerEvent,
+    getCalendarEvents
 };
