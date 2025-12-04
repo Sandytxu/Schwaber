@@ -28,8 +28,18 @@ export default function CalendarView({ events }) {
     );
   };
 
-  return (
-    <div style={{ height: "80vh", padding: "1rem" }}>
+  // Capitaliza la primera letra de una cadena
+  const capitalize = (s) => (s ? s.charAt(0).toUpperCase() + s.slice(1) : s);
+
+  // formateo customizado para español
+  const formats = {
+    monthHeaderFormat: (date) => capitalize(format(date, "LLLL yyyy", { locale: esES })),
+    dayHeaderFormat: (date) => capitalize(format(date, "EEEE, d 'de' LLLL", { locale: esES })),
+    weekdayFormat: (date) => capitalize(format(date, "EEEE", { locale: esES })),
+  };
+
+  return ( // importante usar tamaño de 70 vh para que se vea bien, mas de eso y tenemos scroll en la pagina
+    <div style={{ height: "70vh", padding: "2rem", marginBottom: "2rem" }}>
       <Calendar
         localizer={localizer}
         events={mappedEvents}
@@ -39,6 +49,15 @@ export default function CalendarView({ events }) {
         defaultView="month"
         views={["month", "week", "day"]}
         culture="es"
+        formats={formats}
+        messages={{ // traducciones al español
+          month: 'Mes', 
+          week: 'Semana',
+          day: 'Día',
+          today: 'Hoy',
+          previous: 'Anterior',
+          next: 'Siguiente'
+        }}
         popup
         onSelectEvent={handleSelectEvent}
       />

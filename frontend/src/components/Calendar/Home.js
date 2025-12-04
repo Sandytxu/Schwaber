@@ -28,13 +28,16 @@ function Home({ redirect = true }) {
 
   }, []);
   return (
-    <div style={{ textAlign: "center", marginTop: "5%" }}>
-      <h2 style={{ marginBottom: "10px" }}>Calendario</h2>
-      <IcsUploader
-        onEventsLoaded={handleEventsLoaded}
-        backendUrl={REACT_APP_BACKEND_URL || "http://localhost:4000"}
-      />
+    
+    <div style={{ marginLeft: "auto", marginRight: "auto", marginTop: "2rem", width: "80%", textAlign: "center", backgroundColor: "white", borderRadius: "8px", boxShadow: "0 12px 18px rgba(0, 0, 0, 0.5)"}}>
+      <div id="font-titulo">Calendario</div>
+      
       <CalendarView events={events} />
+
+      <IcsUploader 
+        onEventsLoaded={handleEventsLoaded}
+        backendUrl={REACT_APP_BACKEND_URL  || "http://localhost:4000"}
+      />
     </div>
   );
 }
