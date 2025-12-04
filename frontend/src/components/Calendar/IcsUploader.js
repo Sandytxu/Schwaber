@@ -14,7 +14,9 @@ export default function IcsUploader({ onEventsLoaded }) {
     const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/calendar/upload-ics`, {
       method: "POST",
       body: data,
+      credentials: 'include'
     });
+
 
     const events = await res.json();
     onEventsLoaded(events);

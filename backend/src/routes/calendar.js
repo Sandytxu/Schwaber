@@ -5,9 +5,14 @@ const multer = require("multer");
 const fs = require("fs");
 
 const upload = multer({ dest: "uploads/" });
+const {
+  registerEvent
+} = require('../../db/calendar.repository');
+
 
 router.post("/upload-ics", upload.single("file"), async (req, res) => {
   try {
+
     const data = await ical.async.parseFile(req.file.path);
 
     const events = Object.values(data)
@@ -23,7 +28,9 @@ router.post("/upload-ics", upload.single("file"), async (req, res) => {
       }));
 
     fs.unlinkSync(req.file.path); // borrar el .ics temporal
-
+    events.forEach((event) => {
+      registerEvent(req.session.calendarID, event.id, event.title, event.start, event.end, event.description, event.category);
+    });
     res.json(events);
   } catch (error) {
     console.error(error);

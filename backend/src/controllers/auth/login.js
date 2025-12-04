@@ -13,6 +13,13 @@ const login = async (req, res) => {
     const user = findUserByUsername(username);
     if (!user) {
         await createUser(username, password);
+        req.session.userID = user.id;
+        let calendar = findCalendarByUserID(user.id);
+        if (!calendar) {
+            const calendarId = createDefaultCalendarForUser(user.id);
+            calendar = { id: calendarId };
+        }
+        req.session.calendarID = calendar.id;
         return res.status(200).send('ok');
         //return res.status(401).send('Usuario o contraseña incorrectos.');
     }
@@ -21,9 +28,9 @@ const login = async (req, res) => {
         return res.status(401).send('Usuario o contraseña incorrectos.');
     }
     //Cargar calendario
-    let calendar = findCalendarByUserID(user.id);
+    let calendar = await findCalendarByUserID(user.id);
     if (!calendar) {
-        const calendarId = createDefaultCalendarForUser(user.id);
+        const calendarId = await createDefaultCalendarForUser(user.id);
         calendar = { id: calendarId };
     }
     //Guardar en sesión
