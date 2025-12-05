@@ -1,0 +1,13 @@
+/* Mostrar el título completo de los eventos en el calendario */
+
+.rbc-event-content {
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+}
+
+/* El evento crece en altura si necesita más líneas */
+.rbc-event {
+  height: auto;
+  font-size: 12px;
+}

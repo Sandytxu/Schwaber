@@ -2,6 +2,7 @@ import { Calendar, dateFnsLocalizer } from "react-big-calendar";
 import { format, parse, startOfWeek, getDay } from "date-fns";
 import esES from "date-fns/locale/es";
 import "react-big-calendar/lib/css/react-big-calendar.css";
+import "./CalendarView.css";
 
 const locales = { es: esES };
 
