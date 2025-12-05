@@ -1,0 +1,157 @@
+BEGIN:VCALENDAR
+METHOD:PUBLISH
+PRODID:-//Moodle Pty Ltd//NONSGML Moodle Version 2025041401.07//EN
+VERSION:2.0
+BEGIN:VEVENT
+UID:609071@ubuvirtual.ubu.es
+SUMMARY:Vencimiento de ENTREGA TAREA SEMANA 6
+DESCRIPTION:
+CLASS:PUBLIC
+LAST-MODIFIED:20251124T131050Z
+DTSTAMP:20251129T221710Z
+DTSTART:20251202T210000Z
+DTEND:20251202T210000Z
+CATEGORIES:FUNDAMENTOS DEONTOLÓGICOS Y JURÍDICOS (6344 #90O)
+END:VEVENT
+BEGIN:VEVENT
+UID:609206@ubuvirtual.ubu.es
+SUMMARY:Se abre Checkpoint tema 5
+DESCRIPTION:NOTA: cuestionario secuencial\, NO es posible la vuelta atrás.\
+	n
+	
+CLASS:PUBLIC
+LAST-MODIFIED:20251123T164827Z
+DTSTAMP:20251129T221710Z
+DTSTART:20251203T073000Z
+DTEND:20251203T073000Z
+CATEGORIES:INFORMÁTICA BÁSICA (6346 #90O)
+END:VEVENT
+BEGIN:VEVENT
+UID:609226@ubuvirtual.ubu.es
+SUMMARY:Se abre Problemas Tema 5
+DESCRIPTION:Cuestionario de problemas\, 4 problemas con una respuesta simpl
+	e. El tiempo es más que holgado. Se ruega tener bolígrafo y papel borrador\
+	, y reflexionar antes de responder. \n\nNOTA: cuestionario de problemas sec
+	uencial\, NO se permite volver atrás.\n
+	
+CLASS:PUBLIC
+LAST-MODIFIED:20251123T164940Z
+DTSTAMP:20251129T221710Z
+DTSTART:20251203T073000Z
+DTEND:20251203T073000Z
+CATEGORIES:INFORMÁTICA BÁSICA (6346 #90O)
+END:VEVENT
+BEGIN:VEVENT
+UID:609207@ubuvirtual.ubu.es
+SUMMARY:Se cierra Checkpoint tema 5
+DESCRIPTION:NOTA: cuestionario secuencial\, NO es posible la vuelta atrás.\
+	n
+	
+CLASS:PUBLIC
+LAST-MODIFIED:20251123T164827Z
+DTSTAMP:20251129T221710Z
+DTSTART:20251203T225500Z
+DTEND:20251203T225500Z
+CATEGORIES:INFORMÁTICA BÁSICA (6346 #90O)
+END:VEVENT
+BEGIN:VEVENT
+UID:609227@ubuvirtual.ubu.es
+SUMMARY:Se cierra Problemas Tema 5
+DESCRIPTION:Cuestionario de problemas\, 4 problemas con una respuesta simpl
+	e. El tiempo es más que holgado. Se ruega tener bolígrafo y papel borrador\
+	, y reflexionar antes de responder. \n\nNOTA: cuestionario de problemas sec
+	uencial\, NO se permite volver atrás.\n
+	
+CLASS:PUBLIC
+LAST-MODIFIED:20251123T164940Z
+DTSTAMP:20251129T221710Z
+DTSTART:20251203T225500Z
+DTEND:20251203T225500Z
+CATEGORIES:INFORMÁTICA BÁSICA (6346 #90O)
+END:VEVENT
+BEGIN:VEVENT
+UID:609230@ubuvirtual.ubu.es
+SUMMARY:Se abre Cuestionario sobre la entrega de IP
+DESCRIPTION:Cuestionario de la evaluación relacionado con el desarrollo de 
+	la práctica de IP del tema 4.\n\nEsta actividad representa 6% de la calific
+	ación de la asignatura.\n\nAntes de empezar comprobad la calidad de la cone
+	xión con la Universidad.\n\nRESTRICCIONES DE LA PRUEBA:\n\n	*\n\n	*\n\n	* n
+	avegación en secuencia (no se puede volver atrás)\n	* no se autoriza tener 
+	sesiones abiertas de otro navegador que no sea el del cuestionario\n	* no s
+	e autoriza tener abiertas terceras aplicaciones de mensajeria (WhatsApp\, T
+	eams\, Telegram entre otras)\n	* No se permite el uso de la calculadora de 
+	Windows\n	* Se puede emplear calculadora si no permite cambios de base\n	* 
+	Se puede emplear papel borrador y bolígrafo\n	* Las restricciones anteriore
+	s pueden ser chequeadas y reportadas como evidencias \n\n
+	
+CLASS:PUBLIC
+LAST-MODIFIED:20251116T183509Z
+DTSTAMP:20251129T221710Z
+DTSTART:20251210T073000Z
+DTEND:20251210T073000Z
+CATEGORIES:INFORMÁTICA BÁSICA (6346 #90O)
+END:VEVENT
+BEGIN:VEVENT
+UID:609231@ubuvirtual.ubu.es
+SUMMARY:Se cierra Cuestionario sobre la entrega de IP
+DESCRIPTION:Cuestionario de la evaluación relacionado con el desarrollo de 
+	la práctica de IP del tema 4.\n\nEsta actividad representa 6% de la calific
+	ación de la asignatura.\n\nAntes de empezar comprobad la calidad de la cone
+	xión con la Universidad.\n\nRESTRICCIONES DE LA PRUEBA:\n\n	*\n\n	*\n\n	* n
+	avegación en secuencia (no se puede volver atrás)\n	* no se autoriza tener 
+	sesiones abiertas de otro navegador que no sea el del cuestionario\n	* no s
+	e autoriza tener abiertas terceras aplicaciones de mensajeria (WhatsApp\, T
+	eams\, Telegram entre otras)\n	* No se permite el uso de la calculadora de 
+	Windows\n	* Se puede emplear calculadora si no permite cambios de base\n	* 
+	Se puede emplear papel borrador y bolígrafo\n	* Las restricciones anteriore
+	s pueden ser chequeadas y reportadas como evidencias \n\n
+	
+CLASS:PUBLIC
+LAST-MODIFIED:20251116T183509Z
+DTSTAMP:20251129T221710Z
+DTSTART:20251210T225500Z
+DTEND:20251210T225500Z
+CATEGORIES:INFORMÁTICA BÁSICA (6346 #90O)
+END:VEVENT
+BEGIN:VEVENT
+UID:609268@ubuvirtual.ubu.es
+SUMMARY:Vencimiento de IP
+DESCRIPTION:ENTREGA DE INTRODUCCIÓN A LA PROGRAMACIÓN (IP)\n\nLa entrega de
+	l ejercicio ofrece dos enunciados distintos. CADA ALUMNO DEBE REALIZAR EL E
+	NUNCIADO QUE POR SUS APELLIDOS LE CORRESPONDE\, con arreglo a la TABLA DE D
+	ISTRIBUCIÓN que se publica a continuación. EL HECHO DE NO REALIZAR EL SUPUE
+	STO QUE CORRESPONDE EN RELACIÓN A LA TABLA MENCIONADA SUPONE UN CERO en la 
+	calificación de la actividad.\n\nTabla de distribución de enunciados\n		ENU
+	NCIADO\n\nDESDE APELLIDO\n\n(INCLUSIVE)\n\nHASTA APELLIDO\n\n(INCLUSIVE)\n\
+	n		SUPUESTO VECTORIZAR\n		Almeida Barrios\n		Escudero Losana\n\n		SUPUESTO 
+	CIFRADO 2 FASES\n		Fernández Carro\n		López Pascual\n\n		SUPUESTO EDITOR HE
+	XADECIMAL\n		Marcano González\n		Pintado Fernández\n\n		SUPUESTO CIFRADO DE
+	L CÉSAR\n		Robles Jerez\n		Vivanco Galarza\n\nPOR FAVOR\, REVISAR LOS PDF D
+	E LOS ENUNCIADOS QUE EN ENCUENTRAN DENTRO DE LA ACTIVIDAD.\n\n \n\n
+	
+CLASS:PUBLIC
+LAST-MODIFIED:20251116T183613Z
+DTSTAMP:20251129T221710Z
+DTSTART:20251210T225500Z
+DTEND:20251210T225500Z
+CATEGORIES:INFORMÁTICA BÁSICA (6346 #90O)
+
+CLASS:PUBLIC
+LAST-MODIFIED:20251128T185022Z
+DTSTAMP:20251202T210629Z
+DTSTART:20251201T225900Z
+DTEND:20251201T225900Z
+CATEGORIES:ESTADÍSTICA (6355 #90O)
+END:VEVENT
+BEGIN:VEVENT
+UID:648348@ubuvirtual.ubu.es
+SUMMARY:Se cierra Prueba
+DESCRIPTION:
+CLASS:PUBLIC
+LAST-MODIFIED:20251201T164559Z
+DTSTAMP:20251202T210629Z
+DTSTART:20251202T190000Z
+DTEND:20251202T190000Z
+CATEGORIES:ESTADÍSTICA (6355 #90O)
+END:VEVENT
+END:VCALENDAR

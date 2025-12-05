@@ -14,6 +14,29 @@ const localizer = dateFnsLocalizer({
   locales,
 });
 
+const CATEGORY_COLORS = {
+  "ESTADÍSTICA (6355 #90O)": "#B08982",
+  "INFORMÁTICA BÁSICA (6346 #90O)": "#FF9800",
+  "FUNDAMENTOS DEONTOLÓGICOS Y JURÍDICOS (6344 #90O)": "#9C27B0",
+  default: "#607D8B",
+};
+
+// Estilo de cada evento según su categoría
+const eventStyleGetter = (event) => {
+  const bg = CATEGORY_COLORS[event.category] || CATEGORY_COLORS.default;
+
+  return {
+    style: {
+      backgroundColor: bg,
+      color: "white",
+      border: "none",
+      borderRadius: "4px",
+      fontSize: "11px",
+      padding: "0 2px",
+    },
+  };
+};
+
 export default function CalendarView({ events }) {
   const mappedEvents = events.map((e) => ({
     ...e,
@@ -61,6 +84,7 @@ export default function CalendarView({ events }) {
         }}
         popup
         onSelectEvent={handleSelectEvent}
+        eventPropGetter={eventStyleGetter}
       />
     </div>
   );
