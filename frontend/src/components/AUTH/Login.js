@@ -23,7 +23,6 @@ function Login({ redirect = true }) {
 
     try {
       const res = await login(username, password);
-      console.log(res);
       if (res === 'ok') {
         if (redirect) {
           window.location.href = '/';
@@ -31,7 +30,8 @@ function Login({ redirect = true }) {
       }
     }
     catch (error) {
-      messages.current.show({ severity: 'error', summary: 'Error', detail: error.message });
+      console.log(error);
+      messages.current.show({ severity: 'error', summary: 'Error', detail: error.response?.data });
     }
 
 
